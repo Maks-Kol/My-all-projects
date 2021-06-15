@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Изучаем DOM</title>
+</head>
+
+<body>
+	<h1 id="main-heading">Привет, мир!</h1>
+	<!-- <p>Сегодня мы изучаем DOM и jQuery.</p> -->
+
+	<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+	<!--ПОДКЛЮЧАЕМ jQuery -->
+	<script>
+		"use strict"
+		// ИЗМЕНЕНИЕ ЗАГОЛОВКА С ПОМОЩЬЮ DOM
+		// 	var headingElement = document.getElementById("main-heading");
+		//     console.log(headingElement.innerHTML);
+		//     var newHeadingText = prompt("Введите новый заголовок:");
+		//     headingElement.innerHTML = newHeadingText;
+
+		//МЕНЯЕМ ТЕКСТ ЗАГОЛОВКА С ПОМОЩЬЮ jQuery
+		// var newHeadingText = prompt("Введите новый заголовок:");
+		// $("#main-heading").text(newHeadingText);
+
+		// СОЗДАНИЕ НОВЫХ ЭЛЕМЕНТОВ ЧЕРЕЗ jQuery
+		// $("body").append("<p>Это новый параграф</p>");	
+
+		// for (var i = 0; i < 3; i++) {
+		// 	var hobby = prompt("Назови одно из своих хобби!");
+		// 	$("body").append("<p>" + hobby + "</p>");
+		// }
+
+		// АНИМАЦИЯ ЭЛЕМЕНТОВ СРЕДСТВАМИ jQuery
+		// $("h1").fadeOut(3000);	
+
+		// ЦЕПНОЙ ВЫЗОВ И АНИМАЦИЯ НА jQuery (изменяем текст с исчезновением)
+		// $("h1").text("Этот текст скоро исчезнет").fadeOut(3000);	
+		// Элемент растворяется и снова проявляется
+		// $("h1").fadeOut(3000).fadeIn(2000);
+		// Элемент исчезает уплывая вверх
+		// $("h1").slideUp(1000).slideDown(1000);
+		// Элемент исчезает и появляется 5 раз	
+		// for(var i = 0; i < 5; i++) {
+		// 	$("h1").slideUp(1000).slideDown(1000);
+		// }
+		// Элемент растворяется и уплывает вверх, и снова проявляется так же	
+		// $("h1").hide(1000).show(1000);
+
+		// $("#main-heading").text("Мои друзья");
+
+		// var friends = ["Мото", "Спорт", "ЗОЖ"];
+		// for (var i = 0; i < 3; i++) {
+		// 	$("body").append("<p>" + friends[i] + "</p>");
+		// 	$("p").hide().fadeIn(1000);
+		// }
+		// $("p").append(" лучший!");
+
+
+
+
+		// ОТЛОЖЕННОЕ ВЫПОЛНЕНИЕ КОДА И setTimeout
+		// 	var timeUp = function () {
+		// 		alert("Время вышло!");
+		// 	};
+		// 	setTimeout(timeUp, 3000);
+		// 	1	
+
+		// ОТМЕНА ДЕЙСТВИЯ ТАЙМЕРА
+		// 	var doHomeworkAlarm = function () {
+		// 		alert("Эй! Пора учить JavaScript!");
+		// 	};
+		// 	var timeoutId = setTimeout(doHomeworkAlarm, 60000);
+		// 	clearTimeout(timeoutId);	
+
+
+		// Prompt и Alert
+		// let name = prompt('Пожалуйста представьтесь')
+		// alert('Ваше имя' + name);
+
+
+		// CALLBACK ФУНКЦИИ
+		// function learnJS(lang, callback) {
+		// 	console.log(`Я учу: ${lang}`);
+		// 	callback();
+		// }
+
+		// learnJS('JavaScript', function() {
+		// 	console.log('Я прошел этот урок!');
+		// });
+
+
+		// МЕТОДЫ ПЕРЕБОРА КЛЮЧЕЙ И ЗНАЧЕНИЙ В ОБЪЕКТАХ
+		// const options = {
+		// 	name: 'test',
+		// 	width: 1024,
+		// 	heigth: 1024,
+		// 	colors: {
+		// 		border: 'black',
+		// 		dg: 'red'
+		// 	},
+		// 	makeTest: function () {
+		// 		console.log("Test");
+		// 	}
+		// };
+
+		// console.log(Object.keys(options).length);
+
+		//console.log(options['colors']['border']);
+
+		// console.log(options.name);
+
+		// delete options.name; //- удалить свойство name
+
+		// console.log(options);
+
+
+		// let counter = 0;
+		// for (let key in options) {
+		//     if (typeof(options[key]) === 'object') {
+		//         for (let i in options[key]) {
+		//             console.log(`Свойство ${i}, имеет значение ${options[key][i]}`);
+		//             counter++;
+		//         }
+		//     } else {
+		//         console.log(`Свойство ${key}, имеет значение ${options[key]}`); // - перебор ключей и значений объекта
+		//         counter++;
+		//     }
+		// }
+		// console.log(counter);
+
+
+		// const options = {
+		// 	name: 'test',
+		// 	width: 1024,
+		// 	heigth: 1024,
+		// 	colors: {
+		// 		border: 'black',
+		// 		dg: 'red'
+		// 	},
+		// 	makeTest: function () {
+		// 		console.log("Test");
+		// 	}
+		// };
+
+		// let counter = 0;
+		// for (let key in options) {
+		//     if (typeof (options[key]) !== 'object') {
+		//         console.log(`Свойство ${key}, имеет значение ${options[key]}`);
+		//         counter++;
+		//     } else {
+		//         for (let i in options[key]) {
+		//             console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
+		//             counter++;
+		//         }
+		//     }
+		// }
+
+		// console.log(counter);
+
+		// const str = prompt("", "");
+		// const products = str.split(", ");
+		// products.sort();
+		// console.log(products.join('; '));
+
+		// const arr = [1, 2, 3, 6, 8, 10];
+
+		// for (let value of arr) {
+		// 	console.log(value);
+		// }
+	</script>
+</body>
+
+</html>

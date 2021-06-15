@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript ШПАРГАЛКА</title>
+</head>
+<body>
+    <script>
+    ПЕРЕМЕННЫЕ
+        var numberOfSiblings = 1+3;
+        var numberOfCandies = 8;
+        numberOfCandies / numberOfSiblings;
+        2
+        
+    СОЗДАНИЕ НОВЫХ ПЕРЕМЕННЫХ НА ОСНОВЕ ВЫЧИСЛЕНИЙ
+        var secondsInAMinute = 60;
+        var minutesInAnHour = 60;
+        var secondsInAnHour = secondsInAMinute * minutesInAnHour;
+        secondsInAnHour;
+        3600
+
+    ИНКРЕМЕНТ ++, ДЕКРЕМЕНТ--
+        var highFives = 0;
+        ++highFives;
+        1
+        ++highFives;
+        2
+        --highFives;
+        1
+        highFives++;
+        1
+        highFives++;
+        2 
+
+    ЧТОБЫ ИЗМЕНИТЬ ЗНАЧЕНИЕ ПЕРЕМЕННОЙ НА ЗАДАНОЕ ЧИСЛО
+        var score = 10;
+        score +=5;
+        15
+        score -=5;
+        10
+        score *=2;
+        20
+        score /=2;
+        10
+
+    ПОЛУЧЕНИЕ ДЛИННЫ СТРОКИ
+        var java = "Java";
+        java.length;
+        4
+        var script = "Script";
+        script.lenth;
+        6
+        var javascript = java + script;
+        javascript.length;
+        10
+
+    СЛОВО ИЗ ПЕРВЫХ СИМВОЛОВ СТРОК - "беги!"
+        var codeWord1 = "обернись";
+        var codeWord2 = "неужели";
+        var codeWord3 = "огурцы";
+        var codeWord4 = "липкие";
+        var codeWord5 = "?!";
+        codeword [1] + codeWord2 [1] + codeWord3 [1] + codeWord4 [1] + codeWord5 [1]; 
+
+    ПОЛУЧЕНИЕ СРЕЗА СТРОКИ 
+        var longString = "Эта длинная строка такая длинная";
+        longString.slice (4,18);
+        "длинная строка" 
+
+    ПЕРЕВОД СТРОКИ В ЗАГЛАВНЫЙ ИЛИ СТРОЧНЫЙ РЕГИСТР
+        var sillyString = "эЙ, кАК деЛа?";
+        var lowerString = sillyString.toLowerCase();
+        var firstCharacter = lowerString [0];
+        var firstCharacterUpper = firstCharacter.toUpperCase();
+        var restOfstring = lowerString.slice(1);
+        firstCharacrerUpper + restOfString;
+        "Эй как дела?"  
+
+    ОПЕРАТОР && (И) (АМПЕРСАНД АМПЕРСАНД)   
+        var hadShower = true;
+        var hasBackpack = false;
+        hadShower && hasBackPack;
+        false 
+
+    ОПЕРАТОР || (ИЛИ) (ИЛИ ИЛИ) (ПАЙП)
+        var hasApple = true;
+        var hasOrange = false;
+        hasApple || hasOrange;
+        true
+
+    ОПЕРАТОР ! (НЕ)
+        var isWeekend = true;
+        var needToShowerToday = !isWeekend;
+        needToShowerToday;
+        false
+
+        var isWeekand = false;
+        var hadShower = true;
+        var hasApple = false;
+        var hasOrange = true;
+        var shouldGoToSchool = !isWeekend && hadShower && (hasApple || hasOrange);
+        true
+
+    СРАВНЕНИЕ ЧИСЕЛ С ПОМОЩЬЮ БУЛЕВЫХ ЗНАЧЕНИЙ    
+        var height = 150;
+        var heightRestriction = 150;
+        height > heightRestriction;
+        false
+        height >= heightRestriction;
+        true
+        height === heightRestriction;
+        true
+        
+        var height = 0;
+        var heightRestriction = false;
+        height == heightRestriction;
+        true
+
+    ДЛИННА МАССИВА
+        var maiacs = ["Якко, Вакко, Дот"];
+        maniacs.length;
+        3
+        maniacs[maniacs.length - 1];
+        "Дот"
+
+    ДОБАВЛЕНИЕ В МАССИВ
+      В конец
+        var animals = []
+        animals.push("Кот");
+        1
+        animals.push("Пес");
+        animals;
+        ["Кот", "Пес"]
+      В начало
+        animals.unshift("Мартышка");
+        4
+        animals;
+        ["Мартышка", "Кот", "Пес"]
+
+    УДАЛЕНИЕ ЭЛЕМЕНТОВ МАССИВА
+      ИЗ КОНЦА
+        animals.pop();
+        "Пес"
+        animals;
+        ["Мартышка", "Кот"]
+      ИЗ НАЧАЛА
+        animals.shift();
+        "Мартышка"
+        animals;
+        ["Кот"]
+
+    ОБЬЕДИНЕНИЕ МАССИВОВ
+        var furryAnimals = ["Альпака", "Овца"];
+        var scalyAnimals = ["Удав", "Крокодил"];
+        var featheredAnimals = ["Ара", "Додо"];
+        var allAnimals = furryAnimals.concat(scalyAnimals, featheredAnimals);
+        allAnimals;
+        ["Альпака", "Овца", "Удав", "Крокодил", "Ара", "Додо"]
+        furryAnimals;
+        ["Альпака", "Овца"] - отдельные массивы остаются отдельными
+
+    ПОИСК ИНДЕКСА ЭЛЕМЕНТА В МАССИВЕ
+        var colors = ["красный", "зеленый", "синий"];
+        colors.indexOf("синий");
+        2
+        
+    ПРЕВРАЩЕНИЕ ЭЛЕМЕНТА В СТРОКУ
+        var boringAnimals - ["Мартышка", "Кот"];
+        boringAnimals.join(); (" - ") ("*") - разделителем может быть любой знак или буква
+        "Мартышка,Кот"
+
+    СЛУЧАЙНОЕ ЧИСЛО от 0 до 10
+        Math.random();
+        0.8945409457664937
+        Math.random();
+        0.3697543195448816
+
+    ОКРУГЛЕНИЕ ЧИСЛА
+        Math.floor(3.7463463);
+        3
+
+    СЛУЧАЙНЫЙ ЭЛЕМЕНТ МАССИВА
+        "Пещера"var randomWords = ["Взрыв", "Пещера", "Принцесса", "Карандаш"];
+        randomWords[Math.floor(Math.random() * 4)];
+
+    СЛУЧАЙНАЯ ДРАЗНИЛКА ПРИМЕР
+        var randomBodyParts = ["ухо", "нос", "голова"];
+        var randomAdjectives = ["вонючая", "унылая", "тупая"];
+        var randomWords = ["муха", "выдра", "крыса"]; 
+        var randomBodyPart = randomBodyParts[Math.floor(Math.random() * 3)];
+        var randomAdjective = randomAdjectives[Math.floor(Math.random() * 3)];
+        var randomWord = randomWords[Math.floor(Math.random() * 3)]; //или randomWords[Math.loor(Math.random() randomWords.length)]
+        var randomInsult = "У тебя " + randomBodyPart + " словно " + ranomAdjecive + " " + randomWord + "!!!"; //или var randomInsult = ["У тебя", randomBodyPart, "словно", randomAdjective, randomWord + "!!!"].join(" ");
+            "У тебя нос словно тупая выдра!!!"
+                УПРАЖНЕНИЕ
+            var numbers = [3, 2, 1];
+            var wordOne = ["больше,"];
+            var wordTwo = ["чем"];
+            var string = [numbers[0], wordOne, wordTwo, numbers[1], wordOne, wordTwo, numbers[2], "?"].join(" ");
+            "3 больше, чем 2 больше, чем 1 ?"
+
+    СОЗДАНИЕ ОБЬЕКТА
+        var cat = {
+            legs: 4,
+            name: "Тимофей",
+            "full name": "Тимофей Шлуни Тушонычь",
+            color: "Серый"
+            };
+        console.log(cat.name);  //доступ к значениям внутри обьекта
+        Тимофей
+
+    МАССИВЫ ОБЬЕКТОВ
+        var anna = { name: "Анна", age: 11, luckyNumbers: [2, 4, 8, 16]};
+        var dave = { name: "Дэйв", age: 5, luckyNumbers: [3, 9, 40]};
+        var kate = { name: "Кейт", age: 9, luckyNumbers: [1, 2, 3]};
+        var friends = [anna, dave, kate];
+        friends[0].luckyNumbers[1];
+        4
+
+    КОНСТРУКЦИЯ if (ЕСЛИ) else (ИНАЧЕ)   
+        var name = 'Ник.';
+        console.log('Привет, ' + name);
+        if (name.length > 6) {
+            console.log('Ну и длиннющее же у вас имя!');
+        } else {
+            console.log('Имя у вас не из длинных.');
+        }
+        Привет, Ник Имя у вас не из длинных.
+
+    КОНСТРУКЦИЯ if else
+        var lemonChicken = false;
+        var beefWithBlackBean = true;
+        var sweetAndSourPork = true;
+        if (lemonChicken) {
+            console.log("Отлично! Я буду курицу с лимоном!");
+        } else if (beefWithBlackBean) {
+            console.log("Заказываю говядину.");
+        } else if (sweetAndSourPork) {
+            console.log("Ладно, закажу свинину.");
+        } else { //УКАЗЫВАТЬ ЗАВЕРШАЮЩЕЕ ДЕЙСТВИЕ НЕОБЯЗАТЕЛЬНО
+            console.log("Что ж, остается рис с яйцом.");
+        }
+        Заказываю говядину
+
+    ЦИКЛ while, СЧИТАЕМ ОВЕЦ ДО 10
+        var sheepCounted = 0;
+        while (sheepCounted < 10) {
+        console.log("Посчитано овец:" + sheepCounted + "!");
+            sheepCounted++;
+        }
+        console.log("Десять хватит");
+
+    ЦИКЛ for, СЧИТАЕМ ОВЕЦ ДО 10     
+        for (var sheepCounted = 0; sheepCounted < 10; sheepCounted++) {
+            console.log("Посчитано овец:" + sheepCounted + "!");
+        }
+        console.log("Десять хватит");
+
+    ВЫВОДИМ СЛОВО "Привет" ТРИ РАЗА
+        var timesToSayHello = 3;
+        for (var i = 0; i < timesToSayHello; i++) {
+            console.log("Привет!");
+        }
+        Привет!
+        Привет!
+        Привет!
+
+    ПЕРЕБОР ЭЛЕМЕНТОВ МАССИВА С ПОМОЩЬЮ ЦИКЛА for
+        var animals = ["лев", "фламинго", "белый медведь", "удав"];
+        for (var i = 0; i < animals.length; i++) {
+            console.log("В этом зоопарке есть " + animals[i] + ".")
+        }
+        В этом зоопарке есть лев.
+        В этом зоопарке есть фламинго.
+        В этом зоопарке есть белый медведь.
+        В этом зоопарке есть удав.
+
+    ПЕРЕБОР СИМВОЛОВ СТРОКИ С ПОМОЩЬЮ ЦИКЛА for    
+        var name = "Макс";
+        for (var i = 0; i < name.length; i++) {
+            console.log("В моем имени есть буква " + name[i] + ".");
+        }
+        В моем имени есть буква М.
+        В моем имени есть буква а.
+        В моем имени есть буква к.
+        В моем имени есть буква с.
+
+    ВСЕ СТЕПЕНИ ДВОЙКИ НЕ ПРЕВЫШАЮЩИЕ 10000 С ПОМОЩЬЮ ЦИКЛА for
+        for (var x = 2; x < 10000; x = x*2) {
+            console.log(x)
+        }
+        var x = 2;
+        while (x < 10000) {
+            console.log(x*2);
+            x*2;
+        }
+
+    ИЗМЕНЕНИЕ БУКВ СТРОКИ ('хакерский язык')
+        var input = "javascript is awesome";
+        var output = "";
+        for (var i = 0; i < input.length; i++) {
+           var el = input[i]; 
+           if (el === "a") {
+               output = output+"4"
+           }   else if (el === "e") {
+               output = output+"3"
+           }   else if (el === "i") {
+               output = output+"1"
+           }   else if (el === "o") {
+               output = output+"0"
+           }   else{
+               output = output+el
+           }  
+        }
+        console.log(output);
+        "j4v4scr1pt 1s 4w3s0m3"
+
+    ИГРА ВИСЕЛИЦА
+        // Создаем массив со словами
+        var words = ["программа", "макака", "прекрасный", "оладушек", "долбоклюв", "ракетчик"];
+        // Выбираем случайное слово   
+            var word = words[Math.floor(Math.random() * words.length)];
+        // Создаем итоговый массив
+            var answerArray = [];
+            for (var i = 0; i < word.length; i++) {
+                answerArray[i] = "_";
+            }
+            var remainingLetters = word.length;
+        // Игровой цикл
+            var attempts = 16;
+            while (remainingLetters > 0 && attempts > 0)  {
+                // Показываем состояние игры
+                alert(answerArray.join(" "));
+                attempts--;
+        // Запрашиваем вариант ответа
+            var guess = prompt("Угадайте букву, или нажмите Отмена для выхода из игры.");
+            var guess = guess.toLowerCase();
+            if (guess === null)  {
+                break; // Выходим из игрового цыкла
+            }   else if (guess.length !== 1)  {
+                alert ("Пожалуйста, введите одиночную букву.");
+            }   else  {
+                // Обновляем состояние игры
+                for (var j = 0; j < word.length; j++)  {
+                    if (word[j] === guess && answerArray[j] === "_")  {
+                        answerArray[j] = guess;
+                        remainingLetters--;
+                    }
+                } 
+            }
+
+        // Конец игрового цикла  
+        }
+
+        // Отображаем ответ и поздравляем игрока
+        alert(answerArray.join(" "));
+        alert("Отлично! Было загадано слово " + word);
+
+    ФУНКЦИИ    
+        //1
+            var ourFirstFunction = function () {
+                console.log("Привет, мир!");
+            }
+            console.log(ourFirstFunction());
+            "Привет, мир!"
+        //2
+            var sayHelloTo = function (name) {
+                console.log("Привет, " + name + "!");
+            }; 
+            console.log(sayHelloTo("Макс"));
+            "Привет, Макс!"
+        //3
+            var drawCats = function (howManyTimes) {
+                for (var i = 0; i < howManyTimes; i++) {
+                    console.log(i + " =^.^=");
+                }
+            };
+            drawCats(5);
+        //4
+            var printMultipleTimes = function (howManyTimes, whatToDraw) {
+                for (var i = 0; i < howManyTimes; i++) {
+                    console.log(i + " " + whatToDraw);
+                }
+            };
+            printMultipleTimes(5, "OLOLO");
+        //5
+            var double = function (number) {
+                return number * 2;
+            };
+            console.log(double(3));
+            6
+            double(5) + double(6);
+            22
+            double(double(3));
+            12
+
+    СЛУЧАЙНАЯ ДРАЗНИЛКА С ПОМОЩЬЮ ФУНКЦИИ
+        var pickRandomWord = function (words) {
+            return words[Math.floor(Math.random() * words.length)];
+        };
+        var randomBodyParts = ["глаз", "нос", "череп"];
+        var randomAdjectives = ["вонючая", "унылая", "дурацкая"];
+        var randomWords = ["муха", "выдра", "крыса"];
+        var randomString = "У тебя " + pickRandomWord(randomBodyParts) + " словно " + pickRandomWord(randomAdjectives) + " " + pickRandomWord(randomWords) + "!!!";
+        console.log("randomString");
+
+    ФУНКЦИЯ СЛУЧАЙНЫХ ДРАЗНИЛОК
+        var pickRandomWord = function (words) {
+            return words[Math.floor(Math.random() * words.length)];
+        };
+        var generateRandomInsult = function () {
+            var randomBodyParts = ["глаз", "нос", "череп"];
+            var randomAdjectives = ["вонючая", "унылая", "дурацкая"];
+            var randomWords = ["муха", "выдра", "крыса"];
+            var randomString = "У тебя " + pickRandomWord(randomBodyParts) + " словно " + pickRandomWord(randomAdjectives) + " " + pickRandomWord(randomWords) + "!!!"; 
+            return randomString;
+        };
+        console.log(generateRandomInsult());
+
+    ВЫХОД ИЗ ФУНКЦИИ return   
+        var fifthLetter = function (name) {
+            if (name.length < 5) {
+                return;
+            }
+            return "Пятая буква вашего имени: " + name[4] + ".";
+        };
+        console.log(fifthLetter("Николай"));
+
+    МНОГОКРАТНОЕ ИСПОЛЬЗОВАНИЕ return вместо if...else    
+        var medalForScore = function (score) {
+            if (score < 3) {
+                return "Бронзовая";
+            }
+            if (score < 7) {
+                return "Серебряная";
+            }
+                return "Золотая";
+        };  //выводим медаль за набранные очки и выходим из функции
+
+    ПРИМЕР ДЛИННОЙ ЗАПИСИ ФУНКЦИИ
+        var double = function (number) {
+            return number * 2;
+        };
+    ПРИМЕР КОРОТКОЙ ЗАПИСИ ФУНКЦИИ
+        function double(number) {
+            return number * 2;
+        };             
+
+    МАТЕМАТИЧЕСКИЕ РАСЧЕТЫ ФУНКЦИЙ
+        var add = function (a, b) {
+            return a + b;
+        };
+
+        var multiply = function (a, b) {
+            return a * b;
+        };
+        
+        add(multiply(36325, 9824), 777);
+        // 356857577
+
+        var areArraysSame = function ([1, 2, 3], [4, 5, 6]) {
+                for (var i = 0; i < function[0]length; i++) {
+                    console.log(i + " =^.^=");
+                }
+            };
+
+    СОВПАДАЮТ ЛИ МАССИВЫ (с помощью функции)        
+        var areArraysSame = function (arr1, arr2) {
+            if (arr1.length !== arr2.length) {
+                return false;
+            }
+
+            for (var i = 0; i < arr1.length; i++) {
+                if (arr1[i] !== arr2[i]) {
+                    retutn false;
+                }
+            }
+
+            return true;
+        };
+
+        areArraysSame([1,2,3], [4,5,6]);
+        //false
+        areArraysSame([1,2,3], [1,2,3]);
+        //true
+        areArraysSame([1,2,3], [1,2,3,4]);
+        //false
+
+
+ВИСЕЛИЦА С ПОМОЩЬЮ ФУНКЦИЙ
+     var pickWord = function () {
+        // Возвращает случайно выбранное слово
+        var words = [
+            "программа",
+            "макака",
+            "прекрасный",
+            "оладушек"
+        ];
+
+        return words[Math.floor(Math.random() * words.length)];
+    };
+
+    var setupAnswerArray = function (word) {
+        // Возвращает итоговый массив для заданного слова word
+        var answerArray = [];
+        for (var i = 0; i < word.length; i++) {
+            answerArray[i] = "_";
+        }
+
+        return answerArray;
+    };
+
+    var showPlayerProgress = function (answerArray) {
+        // С помощью алерт отображает текущее состояние игры
+        alert(answerArray.join(" "));
+    };
+
+    var getGuess = function () {
+        // Запрашивает ответ игрока с помощью prompt
+        return prompt("Угадайте букву, или нажмите Отмена для выхода из игры.");
+    };
+
+    var updateGameState = function (guess, word, answerArray) {
+        // Обновляет answerArray согласно ответу игрока (guess)
+        // возвращает число, обозначающее, сколько раз буква guess
+        // встречается в слове, чтобы можно было обновить значение 
+        // remainingLetters
+        var appearances = 0;
+        for (var j = 0; j < word.length; j++) {
+            if (word[j] === guess) {
+                answerArray[j] = guess;
+                appearances++;
+            }
+        }
+
+        return appearances;
+    };
+
+    var showAnswerAndCongratulatePlayer = function (answerArray) {
+        // С помощью alert показывает игроку отгаданное слово
+        // и поздравляет его с победой
+        showPlayerProgress(answerArray);
+        alert("Отлично! Было загадано слово " + answerArray.join(""));
+    };
+
+    // word: загаданное слово
+    var word = pickWord();
+    // answerArray: итоговый массив
+    var answerArray = setupAnswerArray(word);
+    // remainingLetters: сколько букв осталось угадать
+    var remainingLetters = word.length;
+    // attempts: количество попыток
+    var attempts = 20;
+
+    while (remainingLetters > 0 && attempts > 0) {
+        showPlayerProgress(answerArray);
+        // guess: ответ игрока
+        var guess = getGuess();
+        var guess = guess.toLowerCase();
+        if (guess === null) {
+            break;
+        } else if (guess.length !== 1) {
+            alert("Пожалуйста, введите одиночную букву.");
+        } else {
+            // correctGuesses: количество открытых букв
+            var correctGuesses = updateGameState(guess, word, answerArray);
+            remainingLetters -= correctGuesses;
+            attempts--;
+        }
+    }
+
+    showAnswerAndCongratulatePlayer(answerArray);
+
+
+    </script>
+    
+</body>
+</html>

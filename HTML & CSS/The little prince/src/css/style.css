@@ -1,0 +1,41 @@
+body {
+    background-color: khaki;
+    
+}
+
+.leon {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+#begin {
+    font-style: italic;
+    font-weight: 900;
+}
+
+h1,h2 {
+    color: red;
+    text-align: center;
+    font-weight: 900;
+    font-style: italic;
+    text-decoration: underline;
+    text-decoration: line-through;
+}
+
+.one {
+    font-style: italic;
+    font-weight: 900;
+    color: red;
+    text-decoration: underline;
+}
+
+.two {
+    font-style: italic;
+    font-weight: 900;
+    color: red;
+    text-decoration: underline;
+}
+
+.h2text {
+    margin: ;
+}

@@ -1,0 +1,31 @@
+<b> </b>                                             жирный текст
+<strong></Strong>                                    жирный текст
+
+<p> </p>                                             новая строка
+
+<hr />                                               полоса
+
+<img src='http://jsheroes.io'/>                      картинка
+
+<input value='Hello' />                              поле ввода
+
+<textarea> </textarea>                               поле ввода расширенное
+
+<a href='http://it-kamasutra.com'> it-kamasutra </a> сылка 
+
+style='width: 50px;'                                 атрибут размер каринки
+
+<ul> </Ul>                                           список
+
+<ol> </ol>                                           список с номерами строк
+
+
+<header></header> <!-- Шапка сайта -->
+<nav></nav> <!-- Навигационное меню -->
+<article></article> <!-- Оформление записи в блоге -->
+<section></section> <!-- Секции на сайте -->
+<main></main> <!-- Основное содержание документа -->
+<addres></addres>
+<footer></footer>
+<wbr> <!-- Перенос строки когда не влезает в блок -->
+<time></time>
